@@ -1,60 +1,59 @@
-# ballpark_home_run_calculator
-# Home Run Simulator (English Version)
+# ホームランシミュレーター（日本語版）
 
-This Python application simulates whether a batted ball would result in a home run based on its velocity, angle, batter's handedness, target zone, and ballpark environment.
-
----
-
-## 🎯 Features
-
-- Full MLB stadium data (LF/LC/CF/RC/RF distances for 30 teams)
-- Batter-direction correction factors (e.g., pull-side power)
-- Ballpark-specific correction factors (e.g., Coors Field altitude)
-- Automatic search for optimal launch angle (10° to 59°)
-- Real-time trajectory visualization using matplotlib
-- Tkinter-based GUI (English)
+このアプリは、打球の初速度・打球角度・打者の利き手・狙う方向・球場による違いを考慮して、ホームランになるかどうかを物理シミュレーションで可視化するGUIアプリケーションです。
 
 ---
 
-## 🔧 Known Issues & Improvement Suggestions
+## 🎯 主な機能
 
-- [ ] The graph currently plots the uncorrected trajectory; could be updated to reflect the corrected distance.
-- [ ] Visual fence lines or thresholds could help indicate home run cutoffs.
-- [ ] Could integrate real-world variables like altitude, temperature, wind, and humidity.
-- [ ] Adding wall height per zone would increase realism.
-- [ ] Future version: Link with real player Statcast data for personalized simulations.
-
----
-
-## 🧪 How to Use
-
-1. Run the script and enter the following:
-   - MLB team (e.g., New York Yankees)
-   - Target zone (e.g., Left Field, Center)
-   - Batter's handedness (Right / Left)
-   - Exit velocity (e.g., 160 m/s)
-2. Click “Calculate” to view:
-   - Optimal launch angle and corrected flight distance
-   - Home run status (yes/no)
-   - Trajectory graph (currently uncorrected)
+- MLB全30球場の左右フェンス・中堅距離を搭載
+- 打者の利き手＆方向による補正（pull/opp field補正）
+- 球場環境（標高など）による飛距離補正
+- 最適な打球角度を自動探索（10〜59度）
+- グラフ描画による放物線の可視化（matplotlib）
+- 日本語GUI（Tkinterベース）
 
 ---
 
-## 🧰 Requirements
+## 🧪 修正点・改善点（今後の提案）
 
-- Python 3.7+
+- [ ] グラフにも補正後の飛距離を反映（現在は未補正で描画）
+- [ ] 実際のホームランライン（フェンス位置）もグラフに可視化
+- [ ] 標高・風速・気温・湿度などの環境要素も反映できるとよりリアル
+- [ ] 各球場の「方向別の壁の高さ」も加味できると正確性UP
+- [ ] メジャー選手の打球データと連携したモードの追加
+
+---
+
+## 🛠️ 使い方
+
+1. アプリ起動後、以下の項目を入力：
+   - 球団名（例：ニューヨーク・ヤンキース）
+   - 狙う方向（左翼〜右翼）
+   - 打者の利き手（右打者／左打者）
+   - 打球初速度（例：160）
+2. 「計算する」をクリック：
+   - 打球の最適角度・飛距離（補正後）
+   - ホームラン可否
+   - 打球の軌道グラフ
+
+---
+
+## 💻 開発環境
+
+- Python 3.7以上
 - matplotlib
-- tkinter (bundled with Python)
+- tkinter（Python標準）
 
 ---
 
-## 📁 File Structure
+## 📁 ファイル構成
 
-- `ballpark_home_run_calculator_english.py`: English version of the GUI simulator
-- Includes: Distance data and correction factors for all 30 MLB ballparks
+- `ballpark_home_run_calculator.py`: 日本語版のメインスクリプト
+- MLB全30球団のスタジアム距離＋補正係数を内包
 
 ---
 
-## 👤 Author
+## 👤 作者
 
 Seiya Genda
