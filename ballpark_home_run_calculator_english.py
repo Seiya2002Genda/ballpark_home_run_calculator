@@ -162,11 +162,11 @@ stadium_corrections = {
 }
 
 available_zones = {
-    "左翼": "left",
-    "左中間": "left_center",
-    "中堅": "center",
-    "右中間": "right_center",
-    "右翼": "right",
+    "Left": "left",
+    "Left Center": "left_center",
+    "Center": "center",
+    "Right Center": "right_center",
+    "Right": "right",
 }
 
 def simulate_flight(v0, angle_deg, correction=1.0):
